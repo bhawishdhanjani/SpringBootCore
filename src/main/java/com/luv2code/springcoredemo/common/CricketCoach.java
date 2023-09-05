@@ -1,4 +1,4 @@
-package com.luv2code.springcoredemo;
+package com.luv2code.springcoredemo.common;
 
 import org.springframework.stereotype.Component;
 
@@ -7,7 +7,7 @@ public class CricketCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Practise for a hour daily";
+		return "Practise for a hour daily by method";
 	}
 	
 

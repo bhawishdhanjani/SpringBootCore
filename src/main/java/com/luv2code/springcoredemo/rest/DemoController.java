@@ -10,18 +10,25 @@ import com.luv2code.springcoredemo.common.Coach;
 @RestController
 public class DemoController {
 	private Coach coach;	
+	private Coach otherCoach;	
 	
 	
 	@Autowired
-	public DemoController(Coach coach) {
+	public DemoController(@Qualifier("cricketCoach") Coach coach,
+							@Qualifier("cricketCoach") Coach otherCoach) {
 		this.coach = coach;
+		this.otherCoach = otherCoach;
 	}
 
 
 
 	@GetMapping("/")
 	public String getDailyWorkoout() {
-		return coach.getDailyWorkout();
+		
+		
+		
+		
+		return coach.getDailyWorkout() + "  Comparing Coach: " + (coach==otherCoach);
 	}
 	
 	

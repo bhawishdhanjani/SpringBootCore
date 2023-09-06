@@ -10,14 +10,12 @@ import com.luv2code.springcoredemo.common.Coach;
 @RestController
 public class DemoController {
 	private Coach coach;	
-	private Coach otherCoach;	
-	
+
 	
 	@Autowired
-	public DemoController(@Qualifier("cricketCoach") Coach coach,
-							@Qualifier("cricketCoach") Coach otherCoach) {
+	public DemoController(@Qualifier("swimCoach") Coach coach) {
 		this.coach = coach;
-		this.otherCoach = otherCoach;
+		
 	}
 
 
@@ -28,7 +26,7 @@ public class DemoController {
 		
 		
 		
-		return coach.getDailyWorkout() + "  Comparing Coach: " + (coach==otherCoach);
+		return coach.getDailyWorkout();
 	}
 	
 	

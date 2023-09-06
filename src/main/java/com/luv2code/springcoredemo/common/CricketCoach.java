@@ -16,15 +16,5 @@ public class CricketCoach implements Coach {
 		
 	}
 	
-	@PostConstruct
-	public void init() {
-		System.out.println("Making Bean");
-	}
-	
-	@PreDestroy
-	public void destroy() {
-		System.out.println("Destroying the bean");
-	}
-	
 
 }
